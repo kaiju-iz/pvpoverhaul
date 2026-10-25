@@ -1,0 +1,40 @@
+# ---------- Resource pack ----------
+# Host pvp-overhaul-pack.zip somewhere with a DIRECT download link, then fill these in.
+resource-pack:
+  enabled: false
+  url: ""
+  sha1: ""          # 40 hex chars, see README
+  required: true
+
+# ---------- Spear-Mace ----------
+spear-mace:
+  craftable: true
+  # Vanilla item the Spear-Mace is built on. MACE keeps the vanilla smash attack.
+  base-material: MACE
+  # Because custom attribute modifiers replace the item's defaults, we re-declare them.
+  # Vanilla mace = 6 damage (1 base + 5) and 0.6 attack speed (4 - 3.4).
+  attack-damage-bonus: 5.0
+  attack-speed-modifier: -3.4
+  reach-bonus: 1.0              # extra block reach (entity interaction range)
+  lunge:
+    enabled: true               # sprinting hit = lunge
+    bonus-damage: 3.0
+    knockback: 0.9
+
+# ---------- Easy weapon / attribute swap ----------
+swap:
+  enabled: true
+  slot: 8                       # hotbar slot (0-8) that the swap key (F) trades with
+  require-sneak: false          # true = only swap while sneaking, so F still works normally otherwise
+
+# ---------- Crystal PvP items ----------
+crystal-detonator:
+  craftable: true
+  radius: 16.0
+  cooldown-ticks: 40
+  power: 6.0
+
+blast-ward:
+  craftable: true
+  damage-reduction: 0.4         # 40% less explosion damage while held in the offhand
+  consume-per-hit: true

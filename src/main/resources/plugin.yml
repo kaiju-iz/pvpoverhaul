@@ -1,0 +1,13 @@
+name: PvpOverhaul
+version: '${version}'
+main: dev.pvpoverhaul.PvpOverhaulPlugin
+api-version: '26.3'
+description: PvP overhaul - spear-mace, easy weapon swap, crystal PvP items
+commands:
+  pvp:
+    description: PvP Overhaul admin command
+    usage: /pvp <reload|give <item> [player]>
+    permission: pvpoverhaul.admin
+permissions:
+  pvpoverhaul.admin:
+    default: op
